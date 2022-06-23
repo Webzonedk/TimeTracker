@@ -1,0 +1,79 @@
+<div class=" row border listContainer">
+    <div class="col">
+        <div class="row" *ngFor="let timeLog of timeLogList; index as i">
+
+            <div class="col-md-12 align-self-start">
+
+                <div class="row border-bottom p-2">
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-xxl-5">
+                                <label>Dato:</label>
+                            </div>
+                            <div class="col-xxl-7">
+                                <span>{{timeLog.date}}</span>
+                            </div>
+                            <div class="col-xxl-5">
+                                <label>Medarbejder:</label>
+                            </div>
+                            <div class="col-xxl-7">
+                                <span>{{timeLog.employeeName}}</span>
+                            </div>
+                            <div class="col-xxl-5">
+                                <label>Kunde:</label>
+                            </div>
+                            <div class="col-xxl-7">
+                                <span>{{timeLog.customer}}</span>
+                            </div>
+                            <div class="col-xxl-5">
+                                <label>Kontakt Person:</label>
+                            </div>
+                            <div class="col-xxl-7">
+                                <span>{{timeLog.contactPerson}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <label>Beskrivelse:</label> {{timeLog.description}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <label>Intern beskrivelse:</label> {{timeLog.descriptionInternal}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="row">
+                            <div class="col-xxl-8">
+                                <label>Tid start:</label>
+                            </div>
+                            <div class="col-xxl-4">
+                                <span>{{timeLog.timeStart | date:'HH:mm'}}</span>
+                            </div>
+                            <div class="col-xxl-8">
+                                <label>Tid Slut:</label>
+                            </div>
+                            <div class="col-xxl-4">
+                                <span>{{timeLog.timeStop | date:'HH:mm'}}</span>
+                            </div>
+                            <div class="col-xxl-8">
+                                <label>Tid ialt:</label>
+                            </div>
+                            <div class="col-xxl-4">
+                                <span>{{timeLog.timeUsedOutput}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

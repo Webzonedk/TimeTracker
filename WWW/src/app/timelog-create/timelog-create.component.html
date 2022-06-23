@@ -1,0 +1,46 @@
+<div class="row border add-Container">
+    <div class="col-md-12">
+        <h3>Registrer tid</h3>
+        <form [formGroup]="addLogForm" (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+                <div class="col-lg-12 form-group">
+                    <label>Dato:</label>
+                    <input formControlName="date" type="date" class="form-control" format="">
+                </div>
+                <div class="col-xxl-6 form-group">
+                    <label>Start tid:</label>
+                    <input formControlName="timeStart" type="time" class="form-control">
+                </div>
+                <div class="col-xxl-6 form-group">
+                    <label>Slut tid:</label>
+                    <input formControlName="timeStop" type="time" class="form-control">
+                </div>
+                <div class="col-lg-12 form-group">
+                    <label>Medarbejder:</label>
+                    <input formControlName="employeeName" type="text" class="form-control">
+                </div>
+                <div class="col-lg-12 form-group">
+                    <label>Kunde:</label>
+                    <input formControlName="customer" type="text" class="form-control">
+                </div>
+                <div class="col-lg-12 form-group">
+                    <label>Kontakt person:</label>
+                    <input formControlName="contactPerson" type="text" class="form-control">
+                </div>
+                <div class="col-lg-12 form-group">
+                    <label>Beskrivelse:</label>
+                    <textarea formControlName="description" type="textarea" rows="4" class="form-control"></textarea>
+                </div>
+                <div class="col-lg-12 form-group">
+                    <label>Intern beskrivelse:</label>
+                    <textarea formControlName="descriptionInternal" type="textarea" rows="4" class="form-control"></textarea>
+                </div>
+                <div class="col-lg-12">
+                    <button [disabled]="!addLogForm.valid" class="btn btn-primary" type="submit">Gem</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
